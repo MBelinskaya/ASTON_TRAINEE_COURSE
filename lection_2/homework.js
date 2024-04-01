@@ -115,10 +115,10 @@ function multiply(x) {
 // должен быть массивом чисел".
 
 function getUniqArray(arr) {
-    if (Array.isArray(arr)) {
+    if (arr.length > 0 && arr.every((elem) => typeof elem === 'number')) {
         return Array.from(new Set(arr));
     } else {
-        throw new Error('В getUniqArray был передан невалидный параметр. Аргумент arrдолжен быть массивом чисел');
+        throw new Error('В getUniqArray был передан невалидный параметр. Аргумент arr должен быть массивом чисел');
     };
 };
 
